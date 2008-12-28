@@ -1,0 +1,6 @@
+lib/rack/session/hashed_cookie.rb
+LICENSE.rdoc
+Manifest
+rack_hashed_cookie_session.gemspec
+Rakefile
+README.rdoc
