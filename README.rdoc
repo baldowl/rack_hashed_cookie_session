@@ -1,0 +1,44 @@
+= Rack's hashed cookie-based session store
+
+Rack::Session::HashedCookie is just a simple port to Rack of the Action
+Controller's cookie-based session store. All the praises to the Rails team,
+all the blames to me.
+
+Remember that the session's content is just hashed to ensure that nobody will
+tamper with it, so do not store sensitive data in it.
+
+== Basic usage
+
+Here is how I use it with Sinatra. A rackup-file, a bit spiced up:
+
+  require 'rubygems'
+  require 'sinatra'
+  require 'rack/session/hashed_cookie'
+
+  root_dir = File.dirname(__FILE__)
+
+  Sinatra::Application.default_options.merge!(
+    :views    => File.join(root_dir, 'views'),
+    :app_file => File.join(root_dir, 'app.rb'),
+    :run      => false,
+    # Explicitly turn off standard cookie session store.
+    :sessions => false,
+    :env      => ENV['RACK_ENV'].nil? ? :development : ENV['RACK_ENV'].to_sym
+  )
+
+  use Rack::Session::HashedCookie, :secret => 'my long, difficultly guessable secret'
+
+  run Sinatra.application
+
+The Sinatra application will use the session normally:
+
+  get '/' do
+    session['user_id'] = 123456
+    session['just_a_string'] = 'Hello world!'
+    erb :show_the_session
+  end
+
+  template :show_the_session do
+    "Hi! Reload the page to see the session:<br>
+    <%= session.inspect %>"
+  end
