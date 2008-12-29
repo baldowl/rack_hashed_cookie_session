@@ -1,14 +1,14 @@
 --- !ruby/object:Gem::Specification 
 name: rack_hashed_cookie_session
 version: !ruby/object:Gem::Version 
-  version: 0.0.0
+  version: 0.0.1
 platform: ruby
 authors: 
 - Emanuele Vicentini
 autorequire: 
 bindir: bin
 
-date: 2008-12-28 00:00:00 +01:00
+date: 2008-12-29 00:00:00 +01:00
 default_executable: 
 dependencies: 
 - !ruby/object:Gem::Dependency 

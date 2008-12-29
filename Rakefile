@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'echoe'
 
-Echoe.new('rack_hashed_cookie_session', '0.0.0') do |s|
+Echoe.new('rack_hashed_cookie_session', '0.0.1') do |s|
   s.author = 'Emanuele Vicentini'
   s.email = 'emanuele.vicentini@gmail.com'
   s.summary = 'Hashed cookie-based session store for Rack'
