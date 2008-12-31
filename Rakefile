@@ -9,4 +9,7 @@ Echoe.new('rack_hashed_cookie_session', '0.0.1') do |s|
   s.need_tar_gz = false
   s.project = nil
   s.gemspec_format = :yaml
+  s.retain_gemspec = true
+  s.rdoc_pattern = /^README|^LICENSE/
+  s.url = 'http://github.com/baldowl/rack_hashed_cookie_session'
 end
