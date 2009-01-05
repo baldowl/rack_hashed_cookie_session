@@ -9,6 +9,10 @@ tamper with it, so do not store sensitive data in it.
 
 == Basic usage
 
+First, install it with:
+
+  $ sudo gem install rack_hashed_cookie_session
+
 Here is how I use it with Sinatra. A rackup-file, a bit spiced up:
 
   require 'rubygems'

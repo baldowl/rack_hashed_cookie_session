@@ -1,14 +1,14 @@
 --- !ruby/object:Gem::Specification 
 name: rack_hashed_cookie_session
 version: !ruby/object:Gem::Version 
-  version: 0.0.1
+  version: 0.0.2
 platform: ruby
 authors: 
 - Emanuele Vicentini
 autorequire: 
 bindir: bin
 
-date: 2008-12-29 00:00:00 +01:00
+date: 2009-01-05 00:00:00 +01:00
 default_executable: 
 dependencies: 
 - !ruby/object:Gem::Dependency 
@@ -38,7 +38,6 @@ executables: []
 extensions: []
 
 extra_rdoc_files: 
-- lib/rack/session/hashed_cookie.rb
 - LICENSE.rdoc
 - README.rdoc
 files: 
@@ -49,7 +48,7 @@ files:
 - Rakefile
 - README.rdoc
 has_rdoc: true
-homepage: ""
+homepage: http://github.com/baldowl/rack_hashed_cookie_session
 post_install_message: 
 rdoc_options: 
 - --line-numbers
@@ -74,7 +73,7 @@ required_rubygems_version: !ruby/object:Gem::Requirement
   version: 
 requirements: []
 
-rubyforge_project: 
+rubyforge_project: rackhcs
 rubygems_version: 1.3.1
 specification_version: 2
 summary: Hashed cookie-based session store for Rack
