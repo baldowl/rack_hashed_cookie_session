@@ -1,3 +1,10 @@
+= This code has been obsoleted by Rack 0.9.0; upgrade Rack, if you can.
+
+Shortly after the first release of this code, Rack 0.9.0 has been published;
+now Rack::Session::Cookie handles tamper-proof cookies (almost) out of the
+box. If you're not stuck with an older Rack, upgrade and use the official
+Cookie class.
+
 = Rack's hashed cookie-based session store
 
 Rack::Session::HashedCookie is just a simple port to Rack of the Action
